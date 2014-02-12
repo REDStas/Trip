@@ -9,6 +9,9 @@
 #import "REDAppDelegate.h"
 
 @implementation REDAppDelegate
+{
+    REDStartPage *startPage;
+}
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -17,11 +20,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        startPage = [[REDStartPage alloc] initWithNibName:@"REDStartPage" bundle:nil];
+    }
+    else {
+        startPage = [[REDStartPage alloc] initWithNibName:@"REDStartPage" bundle:nil];
+    }
+    self.window.rootViewController = startPage;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

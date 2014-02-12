@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "REDStartPage.h"
+#import "REDPopUp.h"
+
 @interface REDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

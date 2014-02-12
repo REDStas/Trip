@@ -22,6 +22,10 @@
 		863A08D218AA8AB600BD5760 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863A08B618AA8AB500BD5760 /* CoreData.framework */; };
 		863A08DA18AA8AB600BD5760 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863A08D818AA8AB600BD5760 /* InfoPlist.strings */; };
 		863A08DC18AA8AB600BD5760 /* TripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863A08DB18AA8AB600BD5760 /* TripTests.m */; };
+		863A08E918AA8C3600BD5760 /* REDStartPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 863A08E718AA8C3600BD5760 /* REDStartPage.m */; };
+		863A08EA18AA8C3600BD5760 /* REDStartPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 863A08E818AA8C3600BD5760 /* REDStartPage.xib */; };
+		863A08EE18AA8E2900BD5760 /* REDPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 863A08EC18AA8E2900BD5760 /* REDPopUp.m */; };
+		863A08EF18AA8E2900BD5760 /* REDPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 863A08ED18AA8E2900BD5760 /* REDPopUp.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		863A08D718AA8AB600BD5760 /* TripTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TripTests-Info.plist"; sourceTree = "<group>"; };
 		863A08D918AA8AB600BD5760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		863A08DB18AA8AB600BD5760 /* TripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripTests.m; sourceTree = "<group>"; };
+		863A08E618AA8C3600BD5760 /* REDStartPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDStartPage.h; sourceTree = "<group>"; };
+		863A08E718AA8C3600BD5760 /* REDStartPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDStartPage.m; sourceTree = "<group>"; };
+		863A08E818AA8C3600BD5760 /* REDStartPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REDStartPage.xib; sourceTree = "<group>"; };
+		863A08EB18AA8E2900BD5760 /* REDPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDPopUp.h; sourceTree = "<group>"; };
+		863A08EC18AA8E2900BD5760 /* REDPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDPopUp.m; sourceTree = "<group>"; };
+		863A08ED18AA8E2900BD5760 /* REDPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REDPopUp.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		863A08B818AA8AB500BD5760 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
+				863A08E518AA8B8400BD5760 /* Classes */,
 				863A08C118AA8AB500BD5760 /* REDAppDelegate.h */,
 				863A08C218AA8AB500BD5760 /* REDAppDelegate.m */,
 				863A08C718AA8AB600BD5760 /* Images.xcassets */,
@@ -151,6 +162,19 @@
 				863A08D818AA8AB600BD5760 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		863A08E518AA8B8400BD5760 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				863A08E618AA8C3600BD5760 /* REDStartPage.h */,
+				863A08E718AA8C3600BD5760 /* REDStartPage.m */,
+				863A08E818AA8C3600BD5760 /* REDStartPage.xib */,
+				863A08EB18AA8E2900BD5760 /* REDPopUp.h */,
+				863A08EC18AA8E2900BD5760 /* REDPopUp.m */,
+				863A08ED18AA8E2900BD5760 /* REDPopUp.xib */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863A08EF18AA8E2900BD5760 /* REDPopUp.xib in Resources */,
+				863A08EA18AA8C3600BD5760 /* REDStartPage.xib in Resources */,
 				863A08BD18AA8AB500BD5760 /* InfoPlist.strings in Resources */,
 				863A08C818AA8AB600BD5760 /* Images.xcassets in Resources */,
 			);
@@ -252,6 +278,8 @@
 				863A08C318AA8AB500BD5760 /* REDAppDelegate.m in Sources */,
 				863A08BF18AA8AB500BD5760 /* main.m in Sources */,
 				863A08C618AA8AB600BD5760 /* Trip.xcdatamodeld in Sources */,
+				863A08E918AA8C3600BD5760 /* REDStartPage.m in Sources */,
+				863A08EE18AA8E2900BD5760 /* REDPopUp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
