@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="REDStartPage">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="REDStartScreen">
             <connections>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -23,6 +23,16 @@
                     </state>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="yHG-FM-cFP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdj-j3-4oj">
+                    <rect key="frame" x="128" y="78" width="38" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Login">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="G8D-XU-4fz"/>
                     </connections>
                 </button>
             </subviews>

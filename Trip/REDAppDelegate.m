@@ -10,7 +10,7 @@
 
 @implementation REDAppDelegate
 {
-    REDStartPage *startPage;
+    REDStartScreen *startPage;
 }
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -21,10 +21,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        startPage = [[REDStartPage alloc] initWithNibName:@"REDStartPage" bundle:nil];
+        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartPage" bundle:nil];
     }
     else {
-        startPage = [[REDStartPage alloc] initWithNibName:@"REDStartPage" bundle:nil];
+        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartPage" bundle:nil];
     }
     self.window.rootViewController = startPage;
     self.window.backgroundColor = [UIColor whiteColor];

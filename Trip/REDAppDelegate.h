@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "REDStartPage.h"
+#import "REDStartScreen.h"
 #import "REDPopUp.h"
 
 @interface REDAppDelegate : UIResponder <UIApplicationDelegate>

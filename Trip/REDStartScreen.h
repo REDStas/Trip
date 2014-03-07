@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "REDPopUp.h"
+#import "REDLoginScreen.h"
+#import "ErrorWindow.h"
 
-@interface REDStartPage : UIViewController
+@interface REDStartScreen : UIViewController
+{
+    REDLoginScreen *loginScreen;
+}
 
 @property (strong, nonatomic) UIWindow* otherWindow;
 @property (strong, nonatomic) REDPopUp *popUp;

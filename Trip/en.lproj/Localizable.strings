@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Trip
+
+  Created by Станислав Редреев on 07.03.14.
+  Copyright (c) 2014 Станислав Редреев. All rights reserved.
+ 
+  Login Screen          LS
+  Start Screen          SS
+ 
+*/
+
+
+
+// Login Screen
+"LS_LoginLabel" = "Login";
+"LS_LoginTextFildPlaceholder" = "User Name or Email";
+"LS_PasswordTextFildPlaceholder" = "Password";
+"LS_AutosaveLabel" = "Save";
+"LS_LoginButton" = "Log in";
+"LS_RegistrationLabel" = "Need an account?";
+"LS_RegistrationButton" = "Create account";
