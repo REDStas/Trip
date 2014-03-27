@@ -22,14 +22,6 @@ static API* sharedInstance = nil;
         return sharedInstance;
     }
     return nil;
-    
-//    static id sharedInstance = nil;
-//    
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        sharedInstance = [[self alloc] init];
-//    });
-//    return sharedInstance;
 }
 
 + (id)alloc
@@ -51,15 +43,13 @@ static API* sharedInstance = nil;
     {
         NSURL *url = [NSURL URLWithString:@"http://trip.hol.es"];
         httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-        // массив с обязательными параметрами добавляем его в каждом методе в params
-        //staticJSONParameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                //@"9DX7qlkeBKLgOd25dYSowSzhNE9ary8E", @"security",
-                                //nil];
     }
     return self;
 }
 
-- (void)singUpwWithEmail:(NSString *)email password:(NSString *)password success:(void (^)(id JSON))successJSON error:(void (^)(id ERROR))failureJSON
+#pragma mark - API
+
+- (void)singUpWithEmail:(NSString *)email password:(NSString *)password success:(void (^)(id JSON))successJSON error:(void (^)(id ERROR))failureJSON
 {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        email, @"email",
@@ -71,10 +61,8 @@ static API* sharedInstance = nil;
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         successJSON(JSON);
-        NSLog(@"API clientTheme - %@", JSON);
     } failure:^(NSURLRequest *request , NSHTTPURLResponse *response , NSError *error , id JSON ) {
         failureJSON(error);
-        NSLog(@"API-ERROR clientTheme - %@", error);
     }];
     [operation start];
 }

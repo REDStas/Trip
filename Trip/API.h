@@ -19,6 +19,6 @@
 
 + (API *)sharedAPI;
 
-- (void)singUpwWithEmail:(NSString *)email password:(NSString *)password success:(void (^)(id JSON))successJSON error:(void (^)(id ERROR))failureJSON;
+- (void)singUpWithEmail:(NSString *)email password:(NSString *)password success:(void (^)(id JSON))successJSON error:(void (^)(id ERROR))failureJSON;
 
 @end

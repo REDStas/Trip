@@ -21,10 +21,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartPage" bundle:nil];
+        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartScreen" bundle:nil];
     }
     else {
-        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartPage" bundle:nil];
+        startPage = [[REDStartScreen alloc] initWithNibName:@"REDStartScreen" bundle:nil];
     }
     self.window.rootViewController = startPage;
     self.window.backgroundColor = [UIColor whiteColor];

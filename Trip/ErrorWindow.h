@@ -12,6 +12,8 @@ typedef NS_ENUM(NSInteger, ErrorType) {
     ErrIncorectLoginOrPassword = 0,
     ErrEmptyTextField = 1,
     ErrNetworkConnectionError = 2,
+    ErrValidationIncorrectEmail = 3,
+    ErrValidationIncorrectPassword = 4,
 };
 
 @interface ErrorWindow : UIView

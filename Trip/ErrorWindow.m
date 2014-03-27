@@ -31,7 +31,7 @@ static ErrorWindow *sharedErrorWindow = nil;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        mainView = [[UIView alloc] initWithFrame:CGRectMake(10, 25, 300, 200)];
+        mainView = [[UIView alloc] initWithFrame:CGRectMake(10, 25, 300, 10)];
         [self addSubview:mainView];
         
         errorList = [[NSMutableArray alloc] init];
@@ -57,6 +57,8 @@ static ErrorWindow *sharedErrorWindow = nil;
     [errorData setObject:@"Неправильный логин или пароль. Повторите вашу попыдку ввсести данные." forKey:@"0"];
     [errorData setObject:@"Пустые поля" forKey:@"1"];
     [errorData setObject:@"Ошибка соединения с сетью" forKey:@"2"];
+    [errorData setObject:@"Неправильно введен логин или емаил" forKey:@"3"];
+    [errorData setObject:@"Неправильно введен пароль" forKey:@"4"];
 }
 
 + (ErrorWindow *)sharedErrorWindow
@@ -64,7 +66,7 @@ static ErrorWindow *sharedErrorWindow = nil;
     @synchronized([ErrorWindow class])
     {
         if (!sharedErrorWindow)
-            sharedErrorWindow = [[ErrorWindow alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+            sharedErrorWindow = [[ErrorWindow alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
         
         return sharedErrorWindow;
     }
@@ -166,7 +168,6 @@ static ErrorWindow *sharedErrorWindow = nil;
 
 - (void)addError:(ErrorType)errorCode
 {
-    errorCode = ErrNetworkConnectionError;
     BOOL isErrorCodeExist = NO;
     for (NSString *code in errorList) {
         if ([[NSString stringWithFormat:@"%i", errorCode] isEqualToString:code])
@@ -178,12 +179,11 @@ static ErrorWindow *sharedErrorWindow = nil;
         [self refresh];
         if (removeMasageTimer == nil)
             removeMasageTimer = [NSTimer scheduledTimerWithTimeInterval:kRemoveMasageTimerInterval target:self selector:@selector(removeOldestErrorMessage) userInfo:nil repeats:YES];
-    }
+    }    
 }
 
 - (void)removeError:(ErrorType)errorCode
 {
-    errorCode = ErrNetworkConnectionError;
     NSInteger errorListCount = [errorList count];
     for (NSInteger i = 0; i < errorListCount; i++) {
         if ([[NSString stringWithFormat:@"%i", errorCode] isEqualToString:[errorList objectAtIndex:i]])
